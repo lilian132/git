@@ -117,3 +117,21 @@ git reset --hard HEAD^
 ```
 git reset --hard 2e70fdf //版本号写前几位即可
 ```
+## 修改与撤销
+
+用`git diff HEAD -- readme.md`命令可以查看工作区和版本库里面最新版本的区别。
+
+`git checkout -- file`可以丢弃工作区的修改：
+
+命令`git checkout -- readme.md`意思就是，把`readme.md`文件在工作区的修改全部撤销，即让这个文件回到最近一次`git commit`或`git add`时的状态。
+
+当然也可以用`git reset`命令。
+
+## 远程服务器
+
+本地仓库上传至远程git服务器
+
+```
+git remote add origin https://github.com/lilian132/git.git	//添加一个远程服务器，别名为origin
+git push -u origin master	//push至服务器，首次push加上-u
+```
