@@ -2,7 +2,7 @@
 
 ## 配置
 
-安装 Git 之后，你要做的第一件事情就是去配置你的名字和邮箱，因为每一次提交都需要这些信息
+*  安装 Git 之后，你要做的第一件事情就是去配置你的名字和邮箱，因为每一次提交都需要这些信息
 
 ```
 git config --global user.name "bukas"
@@ -10,7 +10,14 @@ git config --global user.email "bukas@gmail.com"
 ```
 这种配置属于用户变量配置，配置文件存放在用户目录下。例如windows xp存放在：C:\Documents and Settings\$USER\.gitconfig
 
-获取Git配置信息，执行以下命令
+* 配置存储用户名和密码
+
+```
+$ git config credential.helper store
+```
+在用户目录下生成.git-credentials文件
+
+* 获取Git配置信息，执行以下命令
 
 ```
 git config --list
