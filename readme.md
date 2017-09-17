@@ -8,6 +8,7 @@
 git config --global user.name "bukas"
 git config --global user.email "bukas@gmail.com"
 ```
+这种配置属于用户变量配置，配置文件存放在用户目录下。例如windows xp存放在：C:\Documents and Settings\$USER\.gitconfig
 
 获取Git配置信息，执行以下命令
 
