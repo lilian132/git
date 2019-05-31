@@ -64,6 +64,10 @@ git add a.txt b.txt c.txt
 * git add -u ：他仅监控**已经被add的文件**（即tracked file），他会将被修改的文件提交到暂存区。add -u 不会提交新文件（untracked file）。（git add --update的缩写）
 * git add -A ：是上面两个功能的合集（git add --all的缩写）
 
+## 忽略文件
+.gitignore配置
+如果是已经被监控的文件，则需要额外使用git rm --cached file_path命令清除监控，gitignore才会生效
+
 ## 仓库状态
 
 ```
@@ -111,9 +115,6 @@ git reflog
 <img src="img/reflog.png">
 
 
-
-
-
 ### 版本回退
 
 在 Git中，用`HEAD`表示当前版本，也就是最新的提交`commit id`，上一个版本就是`HEAD^`，上上一个版本就是`HEAD^^`，当然往上100个版本写100个^比较容易数不过来，所以写成`HEAD~100`。
@@ -129,6 +130,15 @@ git reset --hard HEAD^
 ```
 git reset --hard 2e70fdf //版本号写前几位即可
 ```
+
+## 合并多个commit
+(1) reset --hard 方法
+(2) rebase -i 方法
+
+## 代码合并
+(1) cherry-pick
+(2) merge
+
 ## 修改与撤销
 
 用`git diff HEAD -- readme.md`命令可以查看工作区和版本库里面最新版本的区别。
